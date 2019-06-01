@@ -22,23 +22,18 @@ public class User implements Serializable {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "age")
-    private int age;
+    @Column(name = "userName")
+    private String userName;
 
-    @Column(name = "sex")
-    private String sex;
-
-    @Column(name = "name")
-    private String name;
+    @Column(name = "password")
+    private String password;
 
     public User() {
     }
 
-    public User(int id, int age, String sex, String name) {
-        this.id = id;
-        this.age = age;
-        this.sex = sex;
-        this.name = name;
+    public User(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
     }
 
     public int getId() {
@@ -49,37 +44,28 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public int getAge() {
-        return age;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getSex() {
-        return sex;
+    public String getPassword() {
+        return password;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", age=" + age +
-                ", sex='" + sex + '\'' +
-                ", name='" + name + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }
